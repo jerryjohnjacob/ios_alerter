@@ -1,7 +1,7 @@
 class AlertController
-  def show_alert(title=nil, message=nil)
-    alert = UIAlertView.alloc.initWithTitle(title, message: message, delegate: self, cancelButtonTitle: "Cancel", otherButtonTitles: "OK")
+  def show_alert(message="No message")
+    alert = UIAlertView.new
+    alert.message = message
     alert.show
-    alert.release
   end
 end
